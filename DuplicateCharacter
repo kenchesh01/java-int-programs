@@ -1,0 +1,33 @@
+Q #15) Write a Java Program to find the duplicate characters in a string.
+
+Answer: In this program, we have created a string variable str and initialized an integer count with zero.
+
+Then, we have created a character array to convert our string variable to the character. With the help of for loop, we are performing a comparison between different characters at different indexes.
+
+If two characters of consecutive index match, then it will print that character and the counter will be incremented by 1 after each iteration.
+
+public class DuplicateCharacters {
+          
+          public static void main(String[] args) {
+                   // TODO Auto-generated method stub
+                  String str = new String("Sakkett");
+                  int count = 0;
+                  char[] chars = str.toCharArray();
+                  System.out.println("Duplicate characters are:");
+                  for (int i=0; i<str.length();i++) {
+                              for(int j=i+1; j<str.length();j++) {
+                                         if (chars[i] == chars[j]) {
+                                                    System.out.println(chars[j]);
+                                                    count++;
+                                                    break;
+                                          }
+                               }
+                   }
+           }
+ 
+}
+Output:
+
+Duplicate characters are:
+k
+t
